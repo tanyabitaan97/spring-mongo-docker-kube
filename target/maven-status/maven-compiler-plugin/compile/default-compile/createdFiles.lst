@@ -1,0 +1,4 @@
+mongodb\UserController.class
+mongodb\User.class
+mongodb\UserRepository.class
+mongodb\UserApplication.class
