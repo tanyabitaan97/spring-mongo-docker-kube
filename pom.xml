@@ -8,6 +8,7 @@
   <artifactId>mongodb-deploy</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+         
   <!-- Add this parent for Spring Boot version management -->
   <parent>
     <groupId>org.springframework.boot</groupId>
