@@ -30,7 +30,7 @@ pipeline {
                 script {
                     echo "Triggering Job: compile_data"
                     sh 'echo "=== Running compile_data ===" >> output.txt'
-                    build job: 'compile_data'
+                    build job: 'compile_spring'
                     sh 'echo "=== Finished compile_data ===" >> output.txt'
                 }
             }
@@ -41,7 +41,7 @@ pipeline {
                 script {
                     echo "Triggering Job: review_data"
                     sh 'echo "=== Running review_data ===" >> output.txt'
-                    build job: 'review_data'
+                    build job: 'review_spring'
                     sh 'echo "=== Finished review_data ===" >> output.txt'
                 }
             }
@@ -52,7 +52,7 @@ pipeline {
                 script {
                     input message: "Are you sure you want to deploy to '${DEPLOY_ENV}'?"
                     sh "echo '=== Deploying to ${DEPLOY_ENV} ===' >> output.txt"
-                    build job: 'package-data', parameters: [
+                    build job: 'package_spring', parameters: [
                         string(name: 'ENV', value: DEPLOY_ENV)
                     ]
                     sh "echo '=== Deployment to ${DEPLOY_ENV} Complete ===' >> output.txt"
