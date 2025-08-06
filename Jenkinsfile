@@ -41,7 +41,7 @@ pipeline {
                 script {
                     echo "Triggering Job: review_data"
                     sh 'echo "=== Running review_data ===" >> output.txt'
-                    build job: 'review_spring'
+                    build job: 'review_spring_demo'
                     sh 'echo "=== Finished review_data ===" >> output.txt'
                 }
             }
