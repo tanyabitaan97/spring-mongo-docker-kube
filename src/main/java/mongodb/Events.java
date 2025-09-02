@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "userevents")
 public class Events {
+
 	
 	    @Id
 	    private String id;
